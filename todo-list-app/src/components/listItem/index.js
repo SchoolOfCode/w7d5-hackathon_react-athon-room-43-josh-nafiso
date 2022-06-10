@@ -4,7 +4,8 @@ function ListItem({ list, onClick }) {
   let returnArray = [];
   for (let i = 0; i < list.length; i++) {
     if (list[i].length > 0) {
-      returnArray.push(
+      returnArray = [
+        ...returnArray,
         <li key={i}>
           {list[i]}
           <button
@@ -15,8 +16,8 @@ function ListItem({ list, onClick }) {
           >
             Delete
           </button>
-        </li>
-      );
+        </li>,
+      ];
     }
   }
   return returnArray;
