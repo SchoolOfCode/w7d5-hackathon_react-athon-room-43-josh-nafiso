@@ -17,7 +17,6 @@ function App() {
     const newList = text;
     setText("");
     setList([...list, newList]);
-    console.log(list);
   }
 
   return (
@@ -30,7 +29,9 @@ function App() {
           placeHolder="Write a new task..."
         />
         <button onClick={HandleClick}>add to list</button>
-        <ListItem data={list} />
+        <List>
+          <ListItem data={list} />
+        </List>
       </header>
     </main>
   );
