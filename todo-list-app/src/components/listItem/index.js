@@ -1,21 +1,24 @@
 import React from "react";
 
-function ListItem({ data }) {
+function ListItem({ list, onClick }) {
   let returnArray = [];
-  for (let i = 0; i < data.length; i++) {
-    if (data[i].length > 0) {
-      returnArray.push(<li>{data[i]}</li>);
+  for (let i = 0; i < list.length; i++) {
+    if (list[i].length > 0) {
+      returnArray.push(
+        <li key={i}>
+          {list[i]}
+          <button
+            onClick={() => {
+              onClick(list, i);
+            }}
+          >
+            Delete
+          </button>
+        </li>
+      );
     }
   }
   return returnArray;
 }
 
-// function deleteButon(list,index) {
-//   const deleteTask = index +1 ;
-//   const newArray = [
-//       ... list.slice(0, index),
-//       ... list.slice(deleteTask)
-//   ];
-//   return newArray;
-// }
 export default ListItem;
