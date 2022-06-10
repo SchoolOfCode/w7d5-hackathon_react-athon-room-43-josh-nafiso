@@ -10,4 +10,12 @@ function ListItem({ data }) {
   return returnArray;
 }
 
+// function deleteButon(list,index) {
+//   const deleteTask = index +1 ;
+//   const newArray = [
+//       ... list.slice(0, index),
+//       ... list.slice(deleteTask)
+//   ];
+//   return newArray;
+// }
 export default ListItem;
