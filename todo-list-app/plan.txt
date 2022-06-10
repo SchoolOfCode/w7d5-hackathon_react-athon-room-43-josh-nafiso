@@ -1,0 +1,17 @@
+Create react app ✅
+
+Create component folder ✅
+    App folder inside ✅
+    List folder ✅
+    List item folder ✅
+        (Maybe) - Utilize immutable functionality for the list ✅
+        Delete button ✅
+    Input folder ✅
+        Input text ✅
+        Add button ✅
+
+Import the components into app.js ✅
+Make the app.js function a smart component (keep the others dumb) ✅
+
+If we have time work on styling and additional features -
+Add a clear button ✅
