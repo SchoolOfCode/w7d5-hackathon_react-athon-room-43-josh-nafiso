@@ -1,45 +1,41 @@
 import "./App.css";
 import React from "react";
-import {useState} from "react";
+import { useState } from "react";
 import Input from "../input";
+import List from "../list";
+import ListItem from "../listItem";
 
 function App() {
-    const [text, setText] = useState("");
+  const [text, setText] = useState("");
+  const [list, setList] = useState([]);
 
-    function handleChange(userInput) {
-        setText(userInput);
-        // console.log(text);
-    }
-    const [list, setList] = useState([])
-    function HandleClick() {
-        const newList = text
-        console.log(newList);
-        setText("")
-        setList(newList)
+  function handleChange(userInput) {
+    setText(userInput);
+  }
 
-    }
-    // let getValue = (i, e) => {
-    //   let newInput = [...input];
-    //   newInput[i][e.target.name] = e.target.value;
-    //   setInput(newInput);
-    // }
+  function HandleClick() {
+    const newList = text;
+    setText("");
+    setList([...list, newList]);
+    console.log(list);
+  }
 
-    return (
-        <main className="App">
-            <header className="App-header">
-                <h1>ToDo List</h1>
-                <Input text={text}
-                    handleChange={handleChange}
-                    placeHolder="Write a new task..."/>
-                <button onClick={HandleClick}>
-                    add to list
-                </button>
-             
-                    <li>{list}</li>
-            
-            </header>
-        </main>
-    );
+  return (
+    <main className="App">
+      <header className="App-header">
+        <h1>ToDo List</h1>
+        <Input
+          text={text}
+          handleChange={handleChange}
+          placeHolder="Write a new task..."
+        />
+        <button onClick={HandleClick}>add to list</button>
+        <List>
+          <ListItem data={list} />
+        </List>
+      </header>
+    </main>
+  );
 }
 
 export default App;

@@ -1,6 +1,7 @@
 import React from "react";
-function Item({ text }) {
-  return <li>{text}</li>;
+
+function List() {
+  return <ul></ul>;
 }
 
-export default Item;
+export default List;
