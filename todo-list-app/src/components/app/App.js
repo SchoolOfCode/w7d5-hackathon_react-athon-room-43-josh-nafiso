@@ -30,9 +30,7 @@ function App() {
           placeHolder="Write a new task..."
         />
         <button onClick={HandleClick}>add to list</button>
-        <List>
-          <ListItem data={list} />
-        </List>
+        <ListItem data={list} />
       </header>
     </main>
   );
