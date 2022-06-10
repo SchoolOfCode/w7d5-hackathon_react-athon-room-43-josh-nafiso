@@ -1,8 +1,9 @@
 import React from "react";
 
-function Input({ text, handleChange, placeHolder }) {
+function Input({ className, text, handleChange, placeHolder }) {
   return (
     <input
+      className={className}
       value={text}
       onChange={(event) => {
         handleChange(event.target.value);

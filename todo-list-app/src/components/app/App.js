@@ -34,6 +34,7 @@ function App() {
             text={text}
             handleChange={handleChange}
             placeHolder="Write a new task..."
+            className="inputMain"
           />
           <button className="submitButton" onClick={HandleClick}>
             Add +

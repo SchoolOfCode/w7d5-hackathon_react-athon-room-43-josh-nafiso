@@ -1,7 +1,17 @@
+:root{
+  --mainFont: 'Roboto Mono', monospace;
+}
+
 .deletebutton {
-  background-color: red;
-  color: white;
   margin: 10px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: 1px solid red;
+  color: white;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  font-family: var(--mainFont);
 }
 
 .App {
@@ -25,6 +35,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: var(--mainFont);
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -55,6 +66,7 @@
   cursor: pointer;
   overflow: hidden;
   outline: none;
+  font-family: var(--mainFont);
 }
 
 .clearButton{
@@ -66,4 +78,13 @@
   cursor: pointer;
   overflow: hidden;
   outline: none;
+  font-family: var(--mainFont);
+}
+
+.listItems{
+  font-family: var(--mainFont);
+}
+
+.inputMain{
+  font-family: var(--mainFont);
 }

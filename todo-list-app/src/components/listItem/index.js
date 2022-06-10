@@ -6,7 +6,7 @@ function ListItem({ list, onClick }) {
     if (list[i].length > 0) {
       returnArray = [
         ...returnArray,
-        <li key={i}>
+        <li className="listItems" key={i}>
           {list[i]}
           <button
             className="deletebutton"
