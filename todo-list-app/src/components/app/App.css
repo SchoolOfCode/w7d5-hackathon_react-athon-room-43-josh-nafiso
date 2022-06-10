@@ -1,3 +1,9 @@
+.deletebutton {
+  background-color: red;
+  color: white;
+  margin: 10px;
+}
+
 .App {
   text-align: center;
 }
@@ -34,4 +40,30 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.submitDiv{
+  justify-content: center;
+  align-items: center;
+}
+.submitButton{
+  margin: 1.5px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: 1px solid green;
+  color: white;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+}
+
+.clearButton{
+  margin: 1.5px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: 1px solid green;
+  color: white;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
 }

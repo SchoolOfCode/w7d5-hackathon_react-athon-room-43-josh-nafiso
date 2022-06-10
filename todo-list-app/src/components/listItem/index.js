@@ -8,6 +8,7 @@ function ListItem({ list, onClick }) {
         <li key={i}>
           {list[i]}
           <button
+            className="deletebutton"
             onClick={() => {
               onClick(list, i);
             }}

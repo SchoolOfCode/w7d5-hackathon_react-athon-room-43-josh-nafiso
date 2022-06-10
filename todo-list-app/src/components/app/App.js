@@ -29,12 +29,24 @@ function App() {
     <main className="App">
       <header className="App-header">
         <h1>ToDo List</h1>
-        <Input
-          text={text}
-          handleChange={handleChange}
-          placeHolder="Write a new task..."
-        />
-        <button onClick={HandleClick}>add to list</button>
+        <div className="submitDiv">
+          <Input
+            text={text}
+            handleChange={handleChange}
+            placeHolder="Write a new task..."
+          />
+          <button className="submitButton" onClick={HandleClick}>
+            Add +
+          </button>
+          <button
+            className="clearButton"
+            onClick={() => {
+              setText("");
+            }}
+          >
+            Clear -
+          </button>
+        </div>
         <List>
           <ListItem list={list} onClick={deleteButton} key={list} />
         </List>
